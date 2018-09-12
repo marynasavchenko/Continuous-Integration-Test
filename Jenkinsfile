@@ -2,9 +2,13 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            steps {
-                echo 'This is a minimal pipeline.'
-            }
+         agent {
+               docker { image 'maven:3-alpine' }
+                    }
+                    steps {
+                        sh 'mvn --version'
+                    }
+
         }
     }
 }
