@@ -18,7 +18,7 @@ public class CITest {
 
 	@Test
 	public void shouldPrintMessage() {
-		assertEquals("Test", ci.printMessage());
+		assertEquals("Test environment", ci.printMessage());
 	}
 
 
